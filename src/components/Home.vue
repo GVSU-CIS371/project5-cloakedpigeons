@@ -1,6 +1,6 @@
 <template>
   <!-- your answer -->
-  <v-container>
+  <v-container fluid>
     <v-row>
       <v-col
         v-for="product in products"
