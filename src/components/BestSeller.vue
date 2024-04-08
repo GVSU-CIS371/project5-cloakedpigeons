@@ -1,16 +1,16 @@
 <template>
   <!-- your answer -->
-  <v-container>
+  <v-container fluid>
     <v-row>
       <v-col
-        v-for="product in products"
+        v-for="product in products.filter(obj => obj.data.rating > 4.5)"
         :key="product.id"
         cols="12"
         sm="6"
         md="4"
         lg="3"
       >
-        <store-item v-if="product.data.rating > 4.5" :product="product"></store-item>
+        <store-item  :product="product"></store-item>
       </v-col>
     </v-row>
   </v-container>
